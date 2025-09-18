@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct MazzAppApp: App {
+struct MazzApp: App {
     var body: some Scene {
         WindowGroup {
             TabBarView()
