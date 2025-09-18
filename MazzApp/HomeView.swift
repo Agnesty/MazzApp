@@ -1,5 +1,5 @@
 //
-//  Home View.swift
+//  HomeView.swift
 //  MazzApp
 //
 //  Created by Phincon on 27/07/25.

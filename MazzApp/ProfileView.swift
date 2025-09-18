@@ -9,18 +9,111 @@ import SwiftUI
 
 struct ProfileView: View {
     var body: some View {
-        NavigationView {
-            VStack(spacing: 16) {
-                // Judul besar di tengah
-                Text("Profile")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                    .frame(maxWidth: .infinity, alignment: .center)
-                    .padding(.top, 10)
+        NavigationStack {
+            VStack(alignment: .leading, spacing: 24) {
+                
+                // MARK: - Profile Header
+                HStack(spacing: 16) {
+                    Circle()
+                        .fill(Color.gray.opacity(0.2))
+                        .frame(width: 60, height: 60)
+                        .overlay(
+                            Image(systemName: "person.fill")
+                                .resizable()
+                                .scaledToFit()
+                                .foregroundColor(.gray)
+                                .padding(14)
+                        )
+                    
+                    VStack(alignment: .leading, spacing: 4) {
+                        Text("Agnes Yudia")
+                            .font(.headline)
+                            .foregroundColor(.black)
+                        Text("agnes@example.com")
+                            .font(.subheadline)
+                            .foregroundColor(.gray)
+                    }
+                    
+                    Spacer()
+                    
+                    NavigationLink(destination: ProfileDetailView()) {
+                        Image(systemName: "chevron.right")
+                            .foregroundColor(.gray)
+                    }
+                }
+                .padding()
+                .background(Color.white)
+                .cornerRadius(12)
+                .shadow(color: Color.black.opacity(0.05), radius: 3, x: 0, y: 2)
+                
+                // MARK: - Address & Security
+                VStack(alignment: .leading, spacing: 0) {
+                    Text("ADDRESS & SECURITY")
+                        .font(.caption)
+                        .fontWeight(.semibold)
+                        .foregroundColor(.gray)
+                        .padding(.horizontal)
+                        .padding(.bottom, 8)
+                    
+                    VStack(spacing: 0) {
+                        ProfileOptionRow(icon: "mappin.and.ellipse", title: "Saved Addresses")
+                        Divider()
+                        ProfileOptionRow(icon: "key.fill", title: "Change Password")
+                        Divider()
+                        ProfileOptionRow(icon: "lock.fill", title: "Change Pin")
+                        Divider()
+                        ProfileOptionRow(icon: "faceid", title: "Enable Biometrics", hasToggle: true)
+                    }
+                    .background(Color.white)
+                    .cornerRadius(12)
+                    .shadow(color: Color.black.opacity(0.05), radius: 3, x: 0, y: 2)
+                }
+                
+                Spacer()
             }
-            .navigationBarHidden(true)
-            .background(Color(.systemBackground))
+            .padding()
+            .background(Color(.systemGray6).ignoresSafeArea())
+            .navigationBarTitle("My Profile", displayMode: .inline)
+            .navigationBarItems(trailing:
+            Button(action: {
+                print("Settings tapped")
+            }) {
+                Image(systemName: "square.and.arrow.up")
+                    .foregroundColor(.red)
+            }
+            )
         }
+    }
+}
+
+// MARK: - Row Component
+struct ProfileOptionRow: View {
+    var icon: String
+    var title: String
+    var hasToggle: Bool = false
+    
+    @State private var isOn: Bool = false
+    
+    var body: some View {
+        HStack {
+            Image(systemName: icon)
+                .foregroundColor(.gray)
+                .frame(width: 24, height: 24)
+            
+            Text(title)
+                .foregroundColor(.black)
+            
+            Spacer()
+            
+            if hasToggle {
+                Toggle("", isOn: $isOn)
+                    .labelsHidden()
+            } else {
+                Image(systemName: "chevron.right")
+                    .foregroundColor(.gray)
+            }
+        }
+        .padding()
     }
 }
 
