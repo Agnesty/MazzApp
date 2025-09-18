@@ -14,6 +14,10 @@
 		335ED2672E7C105A00ADF008 /* BannerCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335ED2662E7C105A00ADF008 /* BannerCarouselView.swift */; };
 		335ED2692E7C248000ADF008 /* UserCardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335ED2682E7C248000ADF008 /* UserCardItem.swift */; };
 		335ED26B2E7C24A600ADF008 /* SellingServiceItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335ED26A2E7C24A600ADF008 /* SellingServiceItem.swift */; };
+		335ED2732E7C5E0300ADF008 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335ED2722E7C5E0300ADF008 /* APIService.swift */; };
+		335ED2752E7C5E5500ADF008 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335ED2742E7C5E5500ADF008 /* APIEndpoint.swift */; };
+		335ED2772E7C5EDD00ADF008 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335ED2762E7C5EDD00ADF008 /* APIError.swift */; };
+		335ED27A2E7C5FED00ADF008 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 335ED2792E7C5FED00ADF008 /* Alamofire */; };
 		33B662DC2E66D56300BBBDE1 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 33B662DB2E66D56300BBBDE1 /* SQLite */; };
 		33B662E72E66DA7C00BBBDE1 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 33B662E62E66DA7C00BBBDE1 /* RealmSwift */; };
 		36AC39332E3641F3000DFFF8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AC39322E3641F3000DFFF8 /* HomeView.swift */; };
@@ -35,6 +39,9 @@
 		335ED2662E7C105A00ADF008 /* BannerCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCarouselView.swift; sourceTree = "<group>"; };
 		335ED2682E7C248000ADF008 /* UserCardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCardItem.swift; sourceTree = "<group>"; };
 		335ED26A2E7C24A600ADF008 /* SellingServiceItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SellingServiceItem.swift; sourceTree = "<group>"; };
+		335ED2722E7C5E0300ADF008 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		335ED2742E7C5E5500ADF008 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
+		335ED2762E7C5EDD00ADF008 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		36AC39322E3641F3000DFFF8 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		36AC39342E364295000DFFF8 /* TrendingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingView.swift; sourceTree = "<group>"; };
 		36AC39362E3642B3000DFFF8 /* LiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveView.swift; sourceTree = "<group>"; };
@@ -52,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				335ED27A2E7C5FED00ADF008 /* Alamofire in Frameworks */,
 				33B662E72E66DA7C00BBBDE1 /* RealmSwift in Frameworks */,
 				33B662DC2E66D56300BBBDE1 /* SQLite in Frameworks */,
 			);
@@ -103,6 +111,55 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		335ED26C2E7C5D4A00ADF008 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				335ED26E2E7C5DB900ADF008 /* Networking */,
+				335ED26F2E7C5DC900ADF008 /* Persistance */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		335ED26D2E7C5D6700ADF008 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				335ED2702E7C5DE200ADF008 /* Entities */,
+				335ED2712E7C5DEC00ADF008 /* UseCases */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		335ED26E2E7C5DB900ADF008 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				335ED2722E7C5E0300ADF008 /* APIService.swift */,
+				335ED2742E7C5E5500ADF008 /* APIEndpoint.swift */,
+				335ED2762E7C5EDD00ADF008 /* APIError.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		335ED26F2E7C5DC900ADF008 /* Persistance */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Persistance;
+			sourceTree = "<group>";
+		};
+		335ED2702E7C5DE200ADF008 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		335ED2712E7C5DEC00ADF008 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
 		36D2EED22E30A0460097ABE4 = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +182,8 @@
 				36D2EEDE2E30A0460097ABE4 /* MazzApp.swift */,
 				335ED2592E7BAE3D00ADF008 /* Auth Page */,
 				335ED2612E7BF46E00ADF008 /* Boarding Page */,
+				335ED26C2E7C5D4A00ADF008 /* Data */,
+				335ED26D2E7C5D6700ADF008 /* Domain */,
 				335ED2642E7C0D5800ADF008 /* Home Page */,
 				335ED25E2E7BE99300ADF008 /* Helper */,
 				36D2EEE02E30A0460097ABE4 /* TabBarView.swift */,
@@ -166,6 +225,7 @@
 			packageProductDependencies = (
 				33B662DB2E66D56300BBBDE1 /* SQLite */,
 				33B662E62E66DA7C00BBBDE1 /* RealmSwift */,
+				335ED2792E7C5FED00ADF008 /* Alamofire */,
 			);
 			productName = MazzApp;
 			productReference = 36D2EEDB2E30A0460097ABE4 /* MazzApp.app */;
@@ -198,6 +258,7 @@
 			packageReferences = (
 				33B662DA2E66D56300BBBDE1 /* XCRemoteSwiftPackageReference "SQLite" */,
 				33B662E52E66DA7C00BBBDE1 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				335ED2782E7C5FED00ADF008 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 36D2EEDC2E30A0460097ABE4 /* Products */;
 			projectDirPath = "";
@@ -226,11 +287,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				335ED25D2E7BAE8600ADF008 /* SignInView.swift in Sources */,
+				335ED2732E7C5E0300ADF008 /* APIService.swift in Sources */,
 				36D2EEE12E30A0460097ABE4 /* TabBarView.swift in Sources */,
+				335ED2772E7C5EDD00ADF008 /* APIError.swift in Sources */,
 				36AC39372E3642B3000DFFF8 /* LiveView.swift in Sources */,
 				335ED26B2E7C24A600ADF008 /* SellingServiceItem.swift in Sources */,
 				335ED2632E7BF60800ADF008 /* ProfileDetailView.swift in Sources */,
 				36AC39332E3641F3000DFFF8 /* HomeView.swift in Sources */,
+				335ED2752E7C5E5500ADF008 /* APIEndpoint.swift in Sources */,
 				36D2EEDF2E30A0460097ABE4 /* MazzApp.swift in Sources */,
 				335ED2672E7C105A00ADF008 /* BannerCarouselView.swift in Sources */,
 				335ED2692E7C248000ADF008 /* UserCardItem.swift in Sources */,
@@ -444,6 +508,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		335ED2782E7C5FED00ADF008 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.10.2;
+			};
+		};
 		33B662DA2E66D56300BBBDE1 /* XCRemoteSwiftPackageReference "SQLite" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/stephencelis/SQLite.swift";
@@ -463,6 +535,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		335ED2792E7C5FED00ADF008 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 335ED2782E7C5FED00ADF008 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
 		33B662DB2E66D56300BBBDE1 /* SQLite */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 33B662DA2E66D56300BBBDE1 /* XCRemoteSwiftPackageReference "SQLite" */;
