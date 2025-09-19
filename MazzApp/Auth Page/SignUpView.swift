@@ -13,6 +13,9 @@ struct SignUpView: View {
     @State private var email = ""
     @State private var password = ""
     @State private var confirmPassword = ""
+    @State private var errorMessage: String?
+    
+    private let userRepo = UserRepository()
     
     var body: some View {
         VStack(alignment: .leading, spacing: 24) {
@@ -30,8 +33,38 @@ struct SignUpView: View {
             AuthCustomTextField(title: "Password", systemImage: "lock.fill", text: $password, isSecure: true)
             AuthCustomTextField(title: "Confirm Password", systemImage: "lock.rotation", text: $confirmPassword, isSecure: true)
             
+            if let errorMessage = errorMessage {
+                Text(errorMessage)
+                    .foregroundColor(.red)
+                    .font(.footnote)
+            }
+            
             Button(action: {
-                print("Sign Up tapped")
+                if password != confirmPassword {
+                    errorMessage = "Passwords do not match"
+                    return
+                }
+                
+                if userRepo.isEmailTaken(email) {
+                    errorMessage = "Email already registered"
+                    return
+                }
+                
+                let newUser = User()
+                newUser.fullname = fullname
+                newUser.username = username
+                newUser.email = email
+                newUser.password = password
+                
+                userRepo.addUser(newUser)
+                errorMessage = "✅ User registered successfully!"
+                
+                // kosongkan form setelah sukses
+                fullname = ""
+                username = ""
+                email = ""
+                password = ""
+                confirmPassword = ""
             }) {
                 Text("Sign Up")
                     .foregroundColor(.white)
@@ -41,13 +74,13 @@ struct SignUpView: View {
                     .background(Color.purple)
                     .cornerRadius(12)
             }
+            
             Spacer()
         }
         .padding()
         .background(Color(.systemGray6).ignoresSafeArea())
     }
 }
-
 
 struct SignUpView_Previews: PreviewProvider {
     static var previews: some View {

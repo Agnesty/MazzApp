@@ -2,7 +2,7 @@
 //  NotificationView.swift
 //  MazzApp
 //
-//  Created by Phincon on 27/07/25.
+//  Created by Agnes Triselia Yudia on 27/07/25.
 //
 
 import SwiftUI

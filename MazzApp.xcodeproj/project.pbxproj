@@ -22,6 +22,8 @@
 		337E9CB72E7CF568000C430B /* AuthCustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337E9CB62E7CF568000C430B /* AuthCustomTextField.swift */; };
 		337E9CBC2E7CFF35000C430B /* ProfileOptionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337E9CBB2E7CFF35000C430B /* ProfileOptionRow.swift */; };
 		337E9CBE2E7CFF62000C430B /* ProfileCustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337E9CBD2E7CFF62000C430B /* ProfileCustomTextField.swift */; };
+		337E9CC42E7D0CAC000C430B /* UserRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337E9CC32E7D0CAC000C430B /* UserRealm.swift */; };
+		337E9CC72E7D27EE000C430B /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337E9CC62E7D27EE000C430B /* UserRepository.swift */; };
 		33B662DC2E66D56300BBBDE1 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 33B662DB2E66D56300BBBDE1 /* SQLite */; };
 		33B662E72E66DA7C00BBBDE1 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 33B662E62E66DA7C00BBBDE1 /* RealmSwift */; };
 		36AC39332E3641F3000DFFF8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AC39322E3641F3000DFFF8 /* HomeView.swift */; };
@@ -50,6 +52,8 @@
 		337E9CB62E7CF568000C430B /* AuthCustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCustomTextField.swift; sourceTree = "<group>"; };
 		337E9CBB2E7CFF35000C430B /* ProfileOptionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileOptionRow.swift; sourceTree = "<group>"; };
 		337E9CBD2E7CFF62000C430B /* ProfileCustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCustomTextField.swift; sourceTree = "<group>"; };
+		337E9CC32E7D0CAC000C430B /* UserRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRealm.swift; sourceTree = "<group>"; };
+		337E9CC62E7D27EE000C430B /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		36AC39322E3641F3000DFFF8 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		36AC39342E364295000DFFF8 /* TrendingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingView.swift; sourceTree = "<group>"; };
 		36AC39362E3642B3000DFFF8 /* LiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveView.swift; sourceTree = "<group>"; };
@@ -124,6 +128,7 @@
 		335ED26C2E7C5D4A00ADF008 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				337E9CC52E7D27DD000C430B /* Repositories */,
 				335ED26E2E7C5DB900ADF008 /* Networking */,
 				335ED26F2E7C5DC900ADF008 /* Persistance */,
 			);
@@ -159,6 +164,7 @@
 		335ED2702E7C5DE200ADF008 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				337E9CC32E7D0CAC000C430B /* UserRealm.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -227,6 +233,14 @@
 				36D2EEE02E30A0460097ABE4 /* TabBarView.swift */,
 			);
 			path = "Tab Bar";
+			sourceTree = "<group>";
+		};
+		337E9CC52E7D27DD000C430B /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				337E9CC62E7D27EE000C430B /* UserRepository.swift */,
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 		36D2EED22E30A0460097ABE4 = {
@@ -354,6 +368,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				337E9CC42E7D0CAC000C430B /* UserRealm.swift in Sources */,
 				337E9CB52E7CF239000C430B /* HomeViewModel.swift in Sources */,
 				335ED25D2E7BAE8600ADF008 /* SignInView.swift in Sources */,
 				335ED2732E7C5E0300ADF008 /* APIService.swift in Sources */,
@@ -366,6 +381,7 @@
 				337E9CBE2E7CFF62000C430B /* ProfileCustomTextField.swift in Sources */,
 				36AC39332E3641F3000DFFF8 /* HomeView.swift in Sources */,
 				335ED2752E7C5E5500ADF008 /* APIEndpoint.swift in Sources */,
+				337E9CC72E7D27EE000C430B /* UserRepository.swift in Sources */,
 				36D2EEDF2E30A0460097ABE4 /* MazzApp.swift in Sources */,
 				335ED2672E7C105A00ADF008 /* BannerCarouselView.swift in Sources */,
 				335ED2692E7C248000ADF008 /* UserCardItem.swift in Sources */,

@@ -2,13 +2,20 @@
 //  ProfileView.swift
 //  MazzApp
 //
-//  Created by Phincon on 27/07/25.
+//  Created by Agnes Triselia Yudia on 27/07/25.
 //
 
 import SwiftUI
+import RealmSwift
 
 struct ProfileView: View {
     @AppStorage("isLoggedIn") var isLoggedIn = false
+    @AppStorage("loggedInEmail") var loggedInEmail: String = ""
+    
+    private let userRepo = UserRepository()
+    
+    @State private var username: String = ""
+    @State private var email: String = ""
     
     var body: some View {
         NavigationStack {
@@ -28,10 +35,10 @@ struct ProfileView: View {
                         )
                     
                     VStack(alignment: .leading, spacing: 4) {
-                        Text("Agnes Yudia")
+                        Text(username.isEmpty ? "Your Name" : username)
                             .font(.headline)
                             .foregroundColor(.black)
-                        Text("agnes@example.com")
+                        Text(email.isEmpty ? "Your Email" : email)
                             .font(.subheadline)
                             .foregroundColor(.gray)
                     }
@@ -77,14 +84,22 @@ struct ProfileView: View {
             .background(Color(.systemGray6).ignoresSafeArea())
             .navigationBarTitle("My Profile", displayMode: .inline)
             .navigationBarItems(trailing:
-            Button(action: {
-                isLoggedIn = false
-                print("Settings tapped")
-            }) {
-                Image(systemName: "square.and.arrow.up")
-                    .foregroundColor(.red)
-            }
+                Button(action: {
+                    isLoggedIn = false
+                    loggedInEmail = ""
+                }) {
+                    Image(systemName: "square.and.arrow.up")
+                        .foregroundColor(.red)
+                }
             )
+            .onAppear {
+                if let user = userRepo.fetchUser(byEmail: loggedInEmail) {
+                    username = user.username
+                    email = user.email
+                } else {
+                    print("⚠️ No user found for email: \(loggedInEmail)")
+                }
+            }
         }
     }
 }

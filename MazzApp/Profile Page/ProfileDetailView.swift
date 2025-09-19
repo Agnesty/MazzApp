@@ -5,22 +5,29 @@
 //  Created by Agnes Triselia Yudia on 18/09/25.
 //
 
-import Foundation
 import SwiftUI
+import RealmSwift
 
 struct ProfileDetailView: View {
     @Environment(\.presentationMode) var presentationMode
     
-    @State private var fullname: String = "Agnes Triselia Yudia"
-    @State private var username: String = "Agnesty"
-    @State private var email: String = "agnes@example.com"
-    @State private var mobile: String = "+62 812-3456-7890"
-    @State private var location: String = "Indonesia"
+    @AppStorage("loggedInEmail") var loggedInEmail: String = ""
+    private let userRepo = UserRepository()
+    
+    @State private var fullname: String = ""
+    @State private var username: String = ""
+    @State private var email: String = ""
+    @State private var mobile: String = ""
+    @State private var location: String = ""
+    
+    @State private var currentUser: User?
+    @State private var statusMessage: String?
+    @State private var showAlert = false
     
     var body: some View {
         VStack(spacing: 24) {
             
-            // MARK: - Avatar with Edit Button
+            // Avatar
             ZStack(alignment: .bottomTrailing) {
                 Circle()
                     .fill(Color.gray.opacity(0.2))
@@ -46,7 +53,7 @@ struct ProfileDetailView: View {
             }
             .padding(.top, 20)
             
-            // MARK: - Form Fields
+            // Form
             VStack(spacing: 16) {
                 ProfileCustomTextField(title: "Full Name", text: $fullname)
                 ProfileCustomTextField(title: "Username", text: $username)
@@ -58,9 +65,22 @@ struct ProfileDetailView: View {
             
             Spacer()
             
-            // MARK: - Save Button
             Button(action: {
-                print("Save tapped")
+                if let user = currentUser {
+                    do {
+                        try userRepo.updateUser(user,
+                                                fullname: fullname,
+                                                username: username,
+                                                mobile: mobile,
+                                                location: location)
+                        statusMessage = "✅ Profile berhasil disimpan"
+                    } catch {
+                        statusMessage = "❌ Gagal menyimpan profile: \(error.localizedDescription)"
+                    }
+                } else {
+                    statusMessage = "❌ User tidak ditemukan"
+                }
+                showAlert = true
             }) {
                 Text("SAVE")
                     .fontWeight(.bold)
@@ -82,6 +102,23 @@ struct ProfileDetailView: View {
                 .font(.system(size: 18, weight: .semibold))
                 .foregroundColor(.gray)
         })
+        .onAppear {
+            if let user = userRepo.fetchUser(byEmail: loggedInEmail) {
+                currentUser = user
+                fullname = user.fullname
+                username = user.username
+                email = user.email
+                mobile = user.mobile
+                location = user.location
+            } else {
+                print("⚠️ No user found for email: \(loggedInEmail)")
+            }
+        }
+        .alert(isPresented: $showAlert) {
+            Alert(title: Text("Info"),
+                  message: Text(statusMessage ?? "Terjadi kesalahan"),
+                  dismissButton: .default(Text("OK")))
+        }
     }
 }
 
