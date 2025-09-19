@@ -25,9 +25,9 @@ struct TabBarView: View {
                     Label("Live", systemImage: "play.square.stack")
                 }
             
-            NotificationView()
+            PokemonView()
                 .tabItem {
-                    Label("Notification", systemImage: "heart")
+                    Label("Pokemon", systemImage: "heart")
                 }
             
             ProfileView()

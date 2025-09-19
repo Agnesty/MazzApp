@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct NotificationView: View {
+struct PokemonView: View {
     var body: some View {
         NavigationView {
             VStack(spacing: 16) {
                 // Judul besar di tengah
-                Text("Notification")
+                Text("Pokemon")
                     .font(.largeTitle)
                     .fontWeight(.bold)
                     .frame(maxWidth: .infinity, alignment: .center)
@@ -24,8 +24,8 @@ struct NotificationView: View {
     }
 }
 
-struct NotificationView_Previews: PreviewProvider {
+struct PokemonView_Previews: PreviewProvider {
     static var previews: some View {
-        NotificationView()
+        PokemonView()
     }
 }

@@ -9,9 +9,15 @@ import SwiftUI
 
 @main
 struct MazzApp: App {
+    @AppStorage("isLoggedIn") var isLoggedIn = false
+    
     var body: some Scene {
         WindowGroup {
-            TabBarView()
+            if isLoggedIn {
+                TabBarView()
+            } else {
+                SignInView()
+            }
         }
     }
 }

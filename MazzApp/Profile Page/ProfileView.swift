@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ProfileView: View {
+    @AppStorage("isLoggedIn") var isLoggedIn = false
+    
     var body: some View {
         NavigationStack {
             VStack(alignment: .leading, spacing: 24) {
@@ -76,6 +78,7 @@ struct ProfileView: View {
             .navigationBarTitle("My Profile", displayMode: .inline)
             .navigationBarItems(trailing:
             Button(action: {
+                isLoggedIn = false
                 print("Settings tapped")
             }) {
                 Image(systemName: "square.and.arrow.up")
@@ -83,37 +86,6 @@ struct ProfileView: View {
             }
             )
         }
-    }
-}
-
-// MARK: - Row Component
-struct ProfileOptionRow: View {
-    var icon: String
-    var title: String
-    var hasToggle: Bool = false
-    
-    @State private var isOn: Bool = false
-    
-    var body: some View {
-        HStack {
-            Image(systemName: icon)
-                .foregroundColor(.gray)
-                .frame(width: 24, height: 24)
-            
-            Text(title)
-                .foregroundColor(.black)
-            
-            Spacer()
-            
-            if hasToggle {
-                Toggle("", isOn: $isOn)
-                    .labelsHidden()
-            } else {
-                Image(systemName: "chevron.right")
-                    .foregroundColor(.gray)
-            }
-        }
-        .padding()
     }
 }
 
