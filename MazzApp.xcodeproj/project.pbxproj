@@ -18,6 +18,13 @@
 		335ED2752E7C5E5500ADF008 /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335ED2742E7C5E5500ADF008 /* APIEndpoint.swift */; };
 		335ED2772E7C5EDD00ADF008 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335ED2762E7C5EDD00ADF008 /* APIError.swift */; };
 		335ED27A2E7C5FED00ADF008 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 335ED2792E7C5FED00ADF008 /* Alamofire */; };
+		33682D192E7F91910022A1E4 /* ProductResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33682D182E7F91910022A1E4 /* ProductResponse.swift */; };
+		33682D1B2E7F92050022A1E4 /* ProductItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33682D1A2E7F92050022A1E4 /* ProductItemView.swift */; };
+		33682D1D2E7F92B00022A1E4 /* Struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33682D1C2E7F92B00022A1E4 /* Struct.swift */; };
+		33682D1F2E7F9A040022A1E4 /* HomeRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33682D1E2E7F9A040022A1E4 /* HomeRepositoryProtocol.swift */; };
+		33682D212E7F9A2C0022A1E4 /* GetHomeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33682D202E7F9A2C0022A1E4 /* GetHomeUseCase.swift */; };
+		33682D232E7F9AEA0022A1E4 /* HomeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33682D222E7F9AEA0022A1E4 /* HomeResponse.swift */; };
+		33682D272E7FAC330022A1E4 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 33682D262E7FAC330022A1E4 /* Kingfisher */; };
 		337E9CB52E7CF239000C430B /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337E9CB42E7CF239000C430B /* HomeViewModel.swift */; };
 		337E9CB72E7CF568000C430B /* AuthCustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337E9CB62E7CF568000C430B /* AuthCustomTextField.swift */; };
 		337E9CBC2E7CFF35000C430B /* ProfileOptionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337E9CBB2E7CFF35000C430B /* ProfileOptionRow.swift */; };
@@ -48,6 +55,12 @@
 		335ED2722E7C5E0300ADF008 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		335ED2742E7C5E5500ADF008 /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
 		335ED2762E7C5EDD00ADF008 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		33682D182E7F91910022A1E4 /* ProductResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductResponse.swift; sourceTree = "<group>"; };
+		33682D1A2E7F92050022A1E4 /* ProductItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductItemView.swift; sourceTree = "<group>"; };
+		33682D1C2E7F92B00022A1E4 /* Struct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Struct.swift; sourceTree = "<group>"; };
+		33682D1E2E7F9A040022A1E4 /* HomeRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepositoryProtocol.swift; sourceTree = "<group>"; };
+		33682D202E7F9A2C0022A1E4 /* GetHomeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetHomeUseCase.swift; sourceTree = "<group>"; };
+		33682D222E7F9AEA0022A1E4 /* HomeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeResponse.swift; sourceTree = "<group>"; };
 		337E9CB42E7CF239000C430B /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		337E9CB62E7CF568000C430B /* AuthCustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCustomTextField.swift; sourceTree = "<group>"; };
 		337E9CBB2E7CFF35000C430B /* ProfileOptionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileOptionRow.swift; sourceTree = "<group>"; };
@@ -71,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33682D272E7FAC330022A1E4 /* Kingfisher in Frameworks */,
 				335ED27A2E7C5FED00ADF008 /* Alamofire in Frameworks */,
 				33B662E72E66DA7C00BBBDE1 /* RealmSwift in Frameworks */,
 				33B662DC2E66D56300BBBDE1 /* SQLite in Frameworks */,
@@ -94,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				335ED25F2E7BE9A200ADF008 /* Extension.swift */,
+				33682D1C2E7F92B00022A1E4 /* Struct.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -121,6 +136,7 @@
 				335ED2662E7C105A00ADF008 /* BannerCarouselView.swift */,
 				335ED2682E7C248000ADF008 /* UserCardItem.swift */,
 				335ED26A2E7C24A600ADF008 /* SellingServiceItem.swift */,
+				33682D1A2E7F92050022A1E4 /* ProductItemView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -165,6 +181,8 @@
 			isa = PBXGroup;
 			children = (
 				337E9CC32E7D0CAC000C430B /* UserRealm.swift */,
+				33682D182E7F91910022A1E4 /* ProductResponse.swift */,
+				33682D222E7F9AEA0022A1E4 /* HomeResponse.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -172,6 +190,7 @@
 		335ED2712E7C5DEC00ADF008 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				33682D202E7F9A2C0022A1E4 /* GetHomeUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -239,6 +258,7 @@
 			isa = PBXGroup;
 			children = (
 				337E9CC62E7D27EE000C430B /* UserRepository.swift */,
+				33682D1E2E7F9A040022A1E4 /* HomeRepositoryProtocol.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -308,6 +328,7 @@
 				33B662DB2E66D56300BBBDE1 /* SQLite */,
 				33B662E62E66DA7C00BBBDE1 /* RealmSwift */,
 				335ED2792E7C5FED00ADF008 /* Alamofire */,
+				33682D262E7FAC330022A1E4 /* Kingfisher */,
 			);
 			productName = MazzApp;
 			productReference = 36D2EEDB2E30A0460097ABE4 /* MazzApp.app */;
@@ -341,6 +362,7 @@
 				33B662DA2E66D56300BBBDE1 /* XCRemoteSwiftPackageReference "SQLite" */,
 				33B662E52E66DA7C00BBBDE1 /* XCRemoteSwiftPackageReference "realm-swift" */,
 				335ED2782E7C5FED00ADF008 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				33682D252E7FAC330022A1E4 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 36D2EEDC2E30A0460097ABE4 /* Products */;
 			projectDirPath = "";
@@ -368,11 +390,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33682D1F2E7F9A040022A1E4 /* HomeRepositoryProtocol.swift in Sources */,
 				337E9CC42E7D0CAC000C430B /* UserRealm.swift in Sources */,
 				337E9CB52E7CF239000C430B /* HomeViewModel.swift in Sources */,
 				335ED25D2E7BAE8600ADF008 /* SignInView.swift in Sources */,
 				335ED2732E7C5E0300ADF008 /* APIService.swift in Sources */,
+				33682D1D2E7F92B00022A1E4 /* Struct.swift in Sources */,
 				36D2EEE12E30A0460097ABE4 /* TabBarView.swift in Sources */,
+				33682D232E7F9AEA0022A1E4 /* HomeResponse.swift in Sources */,
+				33682D1B2E7F92050022A1E4 /* ProductItemView.swift in Sources */,
 				335ED2772E7C5EDD00ADF008 /* APIError.swift in Sources */,
 				337E9CB72E7CF568000C430B /* AuthCustomTextField.swift in Sources */,
 				36AC39372E3642B3000DFFF8 /* LiveView.swift in Sources */,
@@ -381,6 +407,8 @@
 				337E9CBE2E7CFF62000C430B /* ProfileCustomTextField.swift in Sources */,
 				36AC39332E3641F3000DFFF8 /* HomeView.swift in Sources */,
 				335ED2752E7C5E5500ADF008 /* APIEndpoint.swift in Sources */,
+				33682D212E7F9A2C0022A1E4 /* GetHomeUseCase.swift in Sources */,
+				33682D192E7F91910022A1E4 /* ProductResponse.swift in Sources */,
 				337E9CC72E7D27EE000C430B /* UserRepository.swift in Sources */,
 				36D2EEDF2E30A0460097ABE4 /* MazzApp.swift in Sources */,
 				335ED2672E7C105A00ADF008 /* BannerCarouselView.swift in Sources */,
@@ -604,6 +632,14 @@
 				minimumVersion = 5.10.2;
 			};
 		};
+		33682D252E7FAC330022A1E4 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.5.0;
+			};
+		};
 		33B662DA2E66D56300BBBDE1 /* XCRemoteSwiftPackageReference "SQLite" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/stephencelis/SQLite.swift";
@@ -627,6 +663,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 335ED2782E7C5FED00ADF008 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		33682D262E7FAC330022A1E4 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 33682D252E7FAC330022A1E4 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 		33B662DB2E66D56300BBBDE1 /* SQLite */ = {
 			isa = XCSwiftPackageProductDependency;

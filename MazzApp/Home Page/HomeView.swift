@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct HomeView: View {
+    @StateObject private var viewModel = HomeViewModel(
+        homeUseCase: HomeUseCase(repository: HomeRepository()))
+    @State private var selectedTab: String = "For You"
+    
     var body: some View {
         NavigationStack {
             ScrollView(.vertical, showsIndicators: false) {
@@ -38,34 +42,76 @@ struct HomeView: View {
                     .padding(.horizontal)
                     
                     // MARK: - Banner
-                    BannerCarouselView()
+                    if let banners = viewModel.homeData?.banners {
+                        BannerCarouselView(banners: banners)
+                    }
                     
-                    // MARK: - Shortcut Buttons
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        HStack(spacing: 12) {
-                            UserCardItem(title: "Rp0", icon: "tag.fill")
-                            UserCardItem(title: "Cek Kupon", icon: "ticket.fill")
-                            UserCardItem(title: "Dikirim ke", icon: "location.fill")
-                            UserCardItem(title: "Dikirim ke", icon: "location.fill")
-                            UserCardItem(title: "Dikirim ke", icon: "location.fill")
+                    // MARK: - Detail User Card Item Buttons
+                    if let cardsItem = viewModel.homeData?.detailUserCards {
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack(spacing: 12) {
+                                ForEach(cardsItem) { card in
+                                    UserCardItem(title: card.text , icon: card.iconName)}
+                            }
+                            .padding(.horizontal)
                         }
-                        .padding(.horizontal)
                     }
                     
                     // MARK: - Horizontal Menu (round icons)
-                    ScrollView(.horizontal, showsIndicators: false) {
-                        LazyHStack(spacing: 24) {
-                            SellingServiceItem(title: "Promo Hari Ini", image: "gift.fill")
-                            SellingServiceItem(title: "Top-Up & Tagihan", image: "creditcard.fill")
-                            SellingServiceItem(title: "Cicil Tanpa Bunga", image: "dollarsign.circle.fill")
-                            SellingServiceItem(title: "GoPay Later", image: "wallet.pass.fill")
-                            SellingServiceItem(title: "Beauty", image: "heart.fill")
+                    if let serviceItem = viewModel.homeData?.sellingServices {
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            LazyHStack(spacing: 24) {
+                                ForEach(serviceItem) { data in
+                                    SellingServiceItem(title: data.title, imageUrl: data.imageUrl)
+                                }
+                            }
+                            .padding(.horizontal)
                         }
-                        .padding(.horizontal)
+                    }
+                    
+                    // MARK: - Sticky Header Tabs
+                    if let stickyHeaderItem = viewModel.homeData?.tabsHomeMenu {
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack(spacing: 30) {
+                                ForEach(stickyHeaderItem) { tab in
+                                    VStack(spacing: 4) {
+                                        Text(tab.tabName)
+                                            .foregroundColor(selectedTab == tab.tabName ? .black : .gray)
+                                            .font(.system(size: 16, weight: selectedTab == tab.tabName ? .semibold : .regular))
+                                            .onTapGesture {
+                                                selectedTab = tab.tabName
+                                            }
+                                        
+                                        // Underline
+                                        Rectangle()
+                                            .fill(Color.blue)
+                                            .frame(height: 2)
+                                            .opacity(selectedTab == tab.tabName ? 1 : 0)
+                                    }
+                                    .frame(minWidth: 100, alignment: .center)
+                                }
+                            }
+                            .padding(.horizontal)
+                            .padding(.top, 8)
+                        }
+                        .background(Color.white)
+                    }
+                    
+                    // MARK: - Produk sesuai Tab
+                    if let items = viewModel.products[selectedTab], !items.isEmpty {
+                        ProductItemView(items: items)
+                    } else if viewModel.isLoading {
+                        ProgressView("Loading products...")
+                            .frame(maxWidth: .infinity)
+                            .padding(.top, 20)
                     }
                 }
                 .padding(.vertical)
                 .padding(.top, -10)
+            }
+            .onAppear {
+                viewModel.fetchHomeData()
+                viewModel.fetchProducts()
             }
         }
     }

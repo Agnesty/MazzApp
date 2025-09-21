@@ -7,7 +7,6 @@
 
 import Foundation
 import SwiftUI
-import UIKit
 
 extension UITextField {
     open override var inputAssistantItem: UITextInputAssistantItem {
@@ -27,4 +26,9 @@ extension UITextView {
     }
 }
 
+extension View {
+    func cornerRadius(_ radius: CGFloat, corners: UIRectCorner) -> some View {
+        clipShape(RoundedCorner(radius: radius, corners: corners))
+    }
+}
 
