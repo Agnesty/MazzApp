@@ -71,7 +71,7 @@ struct SignUpView: View {
                     .fontWeight(.bold)
                     .frame(maxWidth: .infinity)
                     .padding()
-                    .background(Color.purple)
+                    .background(Color.blue)
                     .cornerRadius(12)
             }
             

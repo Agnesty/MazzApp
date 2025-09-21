@@ -52,7 +52,7 @@ struct SignInView: View {
                         .fontWeight(.bold)
                         .frame(maxWidth: .infinity)
                         .padding()
-                        .background(Color.purple)
+                        .background(Color.blue)
                         .cornerRadius(12)
                 }
                 
@@ -63,7 +63,7 @@ struct SignInView: View {
                     NavigationLink(destination: SignUpView()) {
                         Text("Sign Up")
                             .fontWeight(.semibold)
-                            .foregroundColor(.purple)
+                            .foregroundColor(.blue)
                     }
                 }
                 .frame(maxWidth: .infinity, alignment: .center)
