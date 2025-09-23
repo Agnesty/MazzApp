@@ -32,6 +32,7 @@
 		337E9CC42E7D0CAC000C430B /* UserRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337E9CC32E7D0CAC000C430B /* UserRealm.swift */; };
 		337E9CC72E7D27EE000C430B /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337E9CC62E7D27EE000C430B /* UserRepository.swift */; };
 		339008D82E82AE1500D06949 /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339008D72E82AE1500D06949 /* ProductDetailView.swift */; };
+		339008DA2E82F1F400D06949 /* PokemonResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339008D92E82F1F400D06949 /* PokemonResponse.swift */; };
 		33B662DC2E66D56300BBBDE1 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 33B662DB2E66D56300BBBDE1 /* SQLite */; };
 		33B662E72E66DA7C00BBBDE1 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 33B662E62E66DA7C00BBBDE1 /* RealmSwift */; };
 		36AC39332E3641F3000DFFF8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36AC39322E3641F3000DFFF8 /* HomeView.swift */; };
@@ -69,6 +70,7 @@
 		337E9CC32E7D0CAC000C430B /* UserRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRealm.swift; sourceTree = "<group>"; };
 		337E9CC62E7D27EE000C430B /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		339008D72E82AE1500D06949 /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
+		339008D92E82F1F400D06949 /* PokemonResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonResponse.swift; sourceTree = "<group>"; };
 		36AC39322E3641F3000DFFF8 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		36AC39342E364295000DFFF8 /* TrendingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingView.swift; sourceTree = "<group>"; };
 		36AC39362E3642B3000DFFF8 /* LiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveView.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 				337E9CC32E7D0CAC000C430B /* UserRealm.swift */,
 				33682D182E7F91910022A1E4 /* ProductResponse.swift */,
 				33682D222E7F9AEA0022A1E4 /* HomeResponse.swift */,
+				339008D92E82F1F400D06949 /* PokemonResponse.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -412,6 +415,7 @@
 				36AC39332E3641F3000DFFF8 /* HomeView.swift in Sources */,
 				335ED2752E7C5E5500ADF008 /* APIEndpoint.swift in Sources */,
 				33682D212E7F9A2C0022A1E4 /* GetHomeUseCase.swift in Sources */,
+				339008DA2E82F1F400D06949 /* PokemonResponse.swift in Sources */,
 				33682D192E7F91910022A1E4 /* ProductResponse.swift in Sources */,
 				337E9CC72E7D27EE000C430B /* UserRepository.swift in Sources */,
 				36D2EEDF2E30A0460097ABE4 /* MazzApp.swift in Sources */,
