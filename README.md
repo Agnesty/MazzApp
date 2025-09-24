@@ -23,12 +23,17 @@ This project demonstrates my skills in **modern SwiftUI development, reactive da
 - Will display trending products dynamically from Mockoon.
 - Support for **favorite products** with local persistence (CoreData).
 
-### 🎥 Live Page *(Planned)*
-- TikTok-style video list using **AVPlayer** and Combine.
+### 🎥 Live Page *(In Progress)*  
+- TikTok-style **vertical video feed** using `AVPlayer`.
+- Videos fetched from **Pexels API**.
+- Overlay with **caption, music info, and action buttons** (like, comment, share).
+- Smooth vertical swipe between videos with `TabView`.
 
-### 🐱 Pokemon Page *(Planned)*
+### 🐱 Pokémon Page *(In Progress)*
 - Integration with **Pokémon API**.
-- Supports **search and infinite scroll**.
+- **Search and Infinite Scroll** support for listing Pokémon.
+- **Detail Page**: shows image, types, and stats (HP, Attack, Defense, etc.).
+- Clean tabbed interface for **Forms, Detail, Types, Stats, Weakness**.
 
 ### ⚙️ Profile Page
 - Displays user data saved in Realm during Sign Up.
@@ -46,10 +51,11 @@ This project demonstrates my skills in **modern SwiftUI development, reactive da
 - **UI Framework:** SwiftUI  
 - **Architecture:** MVVM  
 - **Reactive Programming:** Combine  
-- **Networking:** URLSession  
+- **Networking:** URLSession + Custom API Client  
 - **Image Loading:** [Kingfisher](https://github.com/onevcat/Kingfisher)  
 - **Mock API:** Mockoon  
-- **Data Persistence:** (planned) CoreData, Realm  
+- **Video API:** [Pexels API](https://www.pexels.com/api/)  
+- **Data Persistence:** Realm (CoreData planned)  
 
 ---
 

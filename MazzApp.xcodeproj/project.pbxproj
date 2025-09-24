@@ -11,6 +11,12 @@
 		334C7ACA2E83916000E3C4F5 /* PokemonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334C7AC92E83916000E3C4F5 /* PokemonViewModel.swift */; };
 		334C7ACC2E83929600E3C4F5 /* PokemonRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334C7ACB2E83929600E3C4F5 /* PokemonRepository.swift */; };
 		334C7ACE2E8392E900E3C4F5 /* GetPokemonUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334C7ACD2E8392E900E3C4F5 /* GetPokemonUseCase.swift */; };
+		334C7AD12E83A99800E3C4F5 /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334C7AD02E83A99800E3C4F5 /* VideoPlayerView.swift */; };
+		334C7AD32E83A9B900E3C4F5 /* PexelsVideoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334C7AD22E83A9B900E3C4F5 /* PexelsVideoResponse.swift */; };
+		334C7AD52E83AA0900E3C4F5 /* VideoPlayerContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334C7AD42E83AA0900E3C4F5 /* VideoPlayerContainer.swift */; };
+		334C7AD72E83AFA500E3C4F5 /* LiveRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334C7AD62E83AFA500E3C4F5 /* LiveRepository.swift */; };
+		334C7AD92E83AFE200E3C4F5 /* LiveViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334C7AD82E83AFE200E3C4F5 /* LiveViewModel.swift */; };
+		334C7ADC2E83C1A400E3C4F5 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 334C7ADB2E83C1A400E3C4F5 /* Config.plist */; };
 		335ED25B2E7BAE5900ADF008 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335ED25A2E7BAE5900ADF008 /* SignUpView.swift */; };
 		335ED25D2E7BAE8600ADF008 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335ED25C2E7BAE8600ADF008 /* SignInView.swift */; };
 		335ED2602E7BE9A200ADF008 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335ED25F2E7BE9A200ADF008 /* Extension.swift */; };
@@ -55,6 +61,13 @@
 		334C7AC92E83916000E3C4F5 /* PokemonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonViewModel.swift; sourceTree = "<group>"; };
 		334C7ACB2E83929600E3C4F5 /* PokemonRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonRepository.swift; sourceTree = "<group>"; };
 		334C7ACD2E8392E900E3C4F5 /* GetPokemonUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPokemonUseCase.swift; sourceTree = "<group>"; };
+		334C7AD02E83A99800E3C4F5 /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
+		334C7AD22E83A9B900E3C4F5 /* PexelsVideoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PexelsVideoResponse.swift; sourceTree = "<group>"; };
+		334C7AD42E83AA0900E3C4F5 /* VideoPlayerContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerContainer.swift; sourceTree = "<group>"; };
+		334C7AD62E83AFA500E3C4F5 /* LiveRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveRepository.swift; sourceTree = "<group>"; };
+		334C7AD82E83AFE200E3C4F5 /* LiveViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveViewModel.swift; sourceTree = "<group>"; };
+		334C7ADA2E83B60000E3C4F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		334C7ADB2E83C1A400E3C4F5 /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		335ED25A2E7BAE5900ADF008 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		335ED25C2E7BAE8600ADF008 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		335ED25F2E7BE9A200ADF008 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
@@ -106,6 +119,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		334C7ACF2E83A97C00E3C4F5 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				334C7AD02E83A99800E3C4F5 /* VideoPlayerView.swift */,
+				334C7AD42E83AA0900E3C4F5 /* VideoPlayerContainer.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		335ED2592E7BAE3D00ADF008 /* Auth Page */ = {
 			isa = PBXGroup;
 			children = (
@@ -197,6 +219,7 @@
 				33682D182E7F91910022A1E4 /* ProductResponse.swift */,
 				33682D222E7F9AEA0022A1E4 /* HomeResponse.swift */,
 				339008D92E82F1F400D06949 /* PokemonResponse.swift */,
+				334C7AD22E83A9B900E3C4F5 /* PexelsVideoResponse.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -249,6 +272,8 @@
 			isa = PBXGroup;
 			children = (
 				36AC39362E3642B3000DFFF8 /* LiveView.swift */,
+				334C7AD82E83AFE200E3C4F5 /* LiveViewModel.swift */,
+				334C7ACF2E83A97C00E3C4F5 /* Components */,
 			);
 			path = "Live Page";
 			sourceTree = "<group>";
@@ -277,6 +302,7 @@
 				337E9CC62E7D27EE000C430B /* UserRepository.swift */,
 				33682D1E2E7F9A040022A1E4 /* HomeRepository.swift */,
 				334C7ACB2E83929600E3C4F5 /* PokemonRepository.swift */,
+				334C7AD62E83AFA500E3C4F5 /* LiveRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -300,6 +326,7 @@
 		36D2EEDD2E30A0460097ABE4 /* MazzApp */ = {
 			isa = PBXGroup;
 			children = (
+				334C7ADA2E83B60000E3C4F5 /* Info.plist */,
 				36D2EEDE2E30A0460097ABE4 /* MazzApp.swift */,
 				337E9CC22E7D0042000C430B /* Tab Bar */,
 				335ED2592E7BAE3D00ADF008 /* Auth Page */,
@@ -314,6 +341,7 @@
 				335ED25E2E7BE99300ADF008 /* Helper */,
 				36D2EEE22E30A0470097ABE4 /* Assets.xcassets */,
 				36D2EEE42E30A0470097ABE4 /* Preview Content */,
+				334C7ADB2E83C1A400E3C4F5 /* Config.plist */,
 			);
 			path = MazzApp;
 			sourceTree = "<group>";
@@ -397,6 +425,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				36D2EEE62E30A0470097ABE4 /* Preview Assets.xcassets in Resources */,
+				334C7ADC2E83C1A400E3C4F5 /* Config.plist in Resources */,
 				36D2EEE32E30A0470097ABE4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -410,6 +439,9 @@
 			files = (
 				33682D1F2E7F9A040022A1E4 /* HomeRepository.swift in Sources */,
 				337E9CC42E7D0CAC000C430B /* UserRealm.swift in Sources */,
+				334C7AD92E83AFE200E3C4F5 /* LiveViewModel.swift in Sources */,
+				334C7AD72E83AFA500E3C4F5 /* LiveRepository.swift in Sources */,
+				334C7AD32E83A9B900E3C4F5 /* PexelsVideoResponse.swift in Sources */,
 				337E9CB52E7CF239000C430B /* HomeViewModel.swift in Sources */,
 				335ED25D2E7BAE8600ADF008 /* SignInView.swift in Sources */,
 				335ED2732E7C5E0300ADF008 /* APIService.swift in Sources */,
@@ -421,6 +453,7 @@
 				335ED2772E7C5EDD00ADF008 /* APIError.swift in Sources */,
 				337E9CB72E7CF568000C430B /* AuthCustomTextField.swift in Sources */,
 				339008D82E82AE1500D06949 /* ProductDetailView.swift in Sources */,
+				334C7AD52E83AA0900E3C4F5 /* VideoPlayerContainer.swift in Sources */,
 				36AC39372E3642B3000DFFF8 /* LiveView.swift in Sources */,
 				335ED26B2E7C24A600ADF008 /* SellingServiceItem.swift in Sources */,
 				335ED2632E7BF60800ADF008 /* ProfileDetailView.swift in Sources */,
@@ -431,6 +464,7 @@
 				334C7ACE2E8392E900E3C4F5 /* GetPokemonUseCase.swift in Sources */,
 				339008DA2E82F1F400D06949 /* PokemonResponse.swift in Sources */,
 				33682D192E7F91910022A1E4 /* ProductResponse.swift in Sources */,
+				334C7AD12E83A99800E3C4F5 /* VideoPlayerView.swift in Sources */,
 				337E9CC72E7D27EE000C430B /* UserRepository.swift in Sources */,
 				36D2EEDF2E30A0460097ABE4 /* MazzApp.swift in Sources */,
 				335ED2672E7C105A00ADF008 /* BannerCarouselView.swift in Sources */,
@@ -578,6 +612,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"MazzApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MazzApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -606,6 +641,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"MazzApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MazzApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
