@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		334C7AC82E838D1800E3C4F5 /* PokemonDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334C7AC72E838D1800E3C4F5 /* PokemonDetailView.swift */; };
+		334C7ACA2E83916000E3C4F5 /* PokemonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334C7AC92E83916000E3C4F5 /* PokemonViewModel.swift */; };
+		334C7ACC2E83929600E3C4F5 /* PokemonRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334C7ACB2E83929600E3C4F5 /* PokemonRepository.swift */; };
+		334C7ACE2E8392E900E3C4F5 /* GetPokemonUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334C7ACD2E8392E900E3C4F5 /* GetPokemonUseCase.swift */; };
 		335ED25B2E7BAE5900ADF008 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335ED25A2E7BAE5900ADF008 /* SignUpView.swift */; };
 		335ED25D2E7BAE8600ADF008 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335ED25C2E7BAE8600ADF008 /* SignInView.swift */; };
 		335ED2602E7BE9A200ADF008 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335ED25F2E7BE9A200ADF008 /* Extension.swift */; };
@@ -21,7 +25,7 @@
 		33682D192E7F91910022A1E4 /* ProductResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33682D182E7F91910022A1E4 /* ProductResponse.swift */; };
 		33682D1B2E7F92050022A1E4 /* ProductItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33682D1A2E7F92050022A1E4 /* ProductItemView.swift */; };
 		33682D1D2E7F92B00022A1E4 /* Struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33682D1C2E7F92B00022A1E4 /* Struct.swift */; };
-		33682D1F2E7F9A040022A1E4 /* HomeRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33682D1E2E7F9A040022A1E4 /* HomeRepositoryProtocol.swift */; };
+		33682D1F2E7F9A040022A1E4 /* HomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33682D1E2E7F9A040022A1E4 /* HomeRepository.swift */; };
 		33682D212E7F9A2C0022A1E4 /* GetHomeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33682D202E7F9A2C0022A1E4 /* GetHomeUseCase.swift */; };
 		33682D232E7F9AEA0022A1E4 /* HomeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33682D222E7F9AEA0022A1E4 /* HomeResponse.swift */; };
 		33682D272E7FAC330022A1E4 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 33682D262E7FAC330022A1E4 /* Kingfisher */; };
@@ -47,6 +51,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		334C7AC72E838D1800E3C4F5 /* PokemonDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetailView.swift; sourceTree = "<group>"; };
+		334C7AC92E83916000E3C4F5 /* PokemonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonViewModel.swift; sourceTree = "<group>"; };
+		334C7ACB2E83929600E3C4F5 /* PokemonRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonRepository.swift; sourceTree = "<group>"; };
+		334C7ACD2E8392E900E3C4F5 /* GetPokemonUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPokemonUseCase.swift; sourceTree = "<group>"; };
 		335ED25A2E7BAE5900ADF008 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		335ED25C2E7BAE8600ADF008 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		335ED25F2E7BE9A200ADF008 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
@@ -60,7 +68,7 @@
 		33682D182E7F91910022A1E4 /* ProductResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductResponse.swift; sourceTree = "<group>"; };
 		33682D1A2E7F92050022A1E4 /* ProductItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductItemView.swift; sourceTree = "<group>"; };
 		33682D1C2E7F92B00022A1E4 /* Struct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Struct.swift; sourceTree = "<group>"; };
-		33682D1E2E7F9A040022A1E4 /* HomeRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepositoryProtocol.swift; sourceTree = "<group>"; };
+		33682D1E2E7F9A040022A1E4 /* HomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepository.swift; sourceTree = "<group>"; };
 		33682D202E7F9A2C0022A1E4 /* GetHomeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetHomeUseCase.swift; sourceTree = "<group>"; };
 		33682D222E7F9AEA0022A1E4 /* HomeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeResponse.swift; sourceTree = "<group>"; };
 		337E9CB42E7CF239000C430B /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -197,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				33682D202E7F9A2C0022A1E4 /* GetHomeUseCase.swift */,
+				334C7ACD2E8392E900E3C4F5 /* GetPokemonUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -248,6 +257,8 @@
 			isa = PBXGroup;
 			children = (
 				36AC39382E3642E8000DFFF8 /* PokemonView.swift */,
+				334C7AC72E838D1800E3C4F5 /* PokemonDetailView.swift */,
+				334C7AC92E83916000E3C4F5 /* PokemonViewModel.swift */,
 			);
 			path = "Pokemon Page";
 			sourceTree = "<group>";
@@ -264,7 +275,8 @@
 			isa = PBXGroup;
 			children = (
 				337E9CC62E7D27EE000C430B /* UserRepository.swift */,
-				33682D1E2E7F9A040022A1E4 /* HomeRepositoryProtocol.swift */,
+				33682D1E2E7F9A040022A1E4 /* HomeRepository.swift */,
+				334C7ACB2E83929600E3C4F5 /* PokemonRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -396,7 +408,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33682D1F2E7F9A040022A1E4 /* HomeRepositoryProtocol.swift in Sources */,
+				33682D1F2E7F9A040022A1E4 /* HomeRepository.swift in Sources */,
 				337E9CC42E7D0CAC000C430B /* UserRealm.swift in Sources */,
 				337E9CB52E7CF239000C430B /* HomeViewModel.swift in Sources */,
 				335ED25D2E7BAE8600ADF008 /* SignInView.swift in Sources */,
@@ -405,6 +417,7 @@
 				36D2EEE12E30A0460097ABE4 /* TabBarView.swift in Sources */,
 				33682D232E7F9AEA0022A1E4 /* HomeResponse.swift in Sources */,
 				33682D1B2E7F92050022A1E4 /* ProductItemView.swift in Sources */,
+				334C7ACC2E83929600E3C4F5 /* PokemonRepository.swift in Sources */,
 				335ED2772E7C5EDD00ADF008 /* APIError.swift in Sources */,
 				337E9CB72E7CF568000C430B /* AuthCustomTextField.swift in Sources */,
 				339008D82E82AE1500D06949 /* ProductDetailView.swift in Sources */,
@@ -415,15 +428,18 @@
 				36AC39332E3641F3000DFFF8 /* HomeView.swift in Sources */,
 				335ED2752E7C5E5500ADF008 /* APIEndpoint.swift in Sources */,
 				33682D212E7F9A2C0022A1E4 /* GetHomeUseCase.swift in Sources */,
+				334C7ACE2E8392E900E3C4F5 /* GetPokemonUseCase.swift in Sources */,
 				339008DA2E82F1F400D06949 /* PokemonResponse.swift in Sources */,
 				33682D192E7F91910022A1E4 /* ProductResponse.swift in Sources */,
 				337E9CC72E7D27EE000C430B /* UserRepository.swift in Sources */,
 				36D2EEDF2E30A0460097ABE4 /* MazzApp.swift in Sources */,
 				335ED2672E7C105A00ADF008 /* BannerCarouselView.swift in Sources */,
 				335ED2692E7C248000ADF008 /* UserCardItem.swift in Sources */,
+				334C7AC82E838D1800E3C4F5 /* PokemonDetailView.swift in Sources */,
 				335ED2602E7BE9A200ADF008 /* Extension.swift in Sources */,
 				337E9CBC2E7CFF35000C430B /* ProfileOptionRow.swift in Sources */,
 				36AC39352E364295000DFFF8 /* TrendingView.swift in Sources */,
+				334C7ACA2E83916000E3C4F5 /* PokemonViewModel.swift in Sources */,
 				36AC393B2E364303000DFFF8 /* ProfileView.swift in Sources */,
 				335ED25B2E7BAE5900ADF008 /* SignUpView.swift in Sources */,
 				36AC39392E3642E8000DFFF8 /* PokemonView.swift in Sources */,
