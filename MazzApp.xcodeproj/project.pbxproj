@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,7 +19,6 @@
 		334C7ADC2E83C1A400E3C4F5 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 334C7ADB2E83C1A400E3C4F5 /* Config.plist */; };
 		335ED25B2E7BAE5900ADF008 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335ED25A2E7BAE5900ADF008 /* SignUpView.swift */; };
 		335ED25D2E7BAE8600ADF008 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335ED25C2E7BAE8600ADF008 /* SignInView.swift */; };
-		335ED2602E7BE9A200ADF008 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335ED25F2E7BE9A200ADF008 /* Extension.swift */; };
 		335ED2632E7BF60800ADF008 /* ProfileDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335ED2622E7BF60800ADF008 /* ProfileDetailView.swift */; };
 		335ED2672E7C105A00ADF008 /* BannerCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335ED2662E7C105A00ADF008 /* BannerCarouselView.swift */; };
 		335ED2692E7C248000ADF008 /* UserCardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 335ED2682E7C248000ADF008 /* UserCardItem.swift */; };
@@ -30,7 +29,6 @@
 		335ED27A2E7C5FED00ADF008 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 335ED2792E7C5FED00ADF008 /* Alamofire */; };
 		33682D192E7F91910022A1E4 /* ProductResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33682D182E7F91910022A1E4 /* ProductResponse.swift */; };
 		33682D1B2E7F92050022A1E4 /* ProductItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33682D1A2E7F92050022A1E4 /* ProductItemView.swift */; };
-		33682D1D2E7F92B00022A1E4 /* Struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33682D1C2E7F92B00022A1E4 /* Struct.swift */; };
 		33682D1F2E7F9A040022A1E4 /* HomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33682D1E2E7F9A040022A1E4 /* HomeRepository.swift */; };
 		33682D212E7F9A2C0022A1E4 /* GetHomeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33682D202E7F9A2C0022A1E4 /* GetHomeUseCase.swift */; };
 		33682D232E7F9AEA0022A1E4 /* HomeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33682D222E7F9AEA0022A1E4 /* HomeResponse.swift */; };
@@ -70,7 +68,6 @@
 		334C7ADB2E83C1A400E3C4F5 /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
 		335ED25A2E7BAE5900ADF008 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		335ED25C2E7BAE8600ADF008 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
-		335ED25F2E7BE9A200ADF008 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		335ED2622E7BF60800ADF008 /* ProfileDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDetailView.swift; sourceTree = "<group>"; };
 		335ED2662E7C105A00ADF008 /* BannerCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCarouselView.swift; sourceTree = "<group>"; };
 		335ED2682E7C248000ADF008 /* UserCardItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCardItem.swift; sourceTree = "<group>"; };
@@ -80,7 +77,6 @@
 		335ED2762E7C5EDD00ADF008 /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		33682D182E7F91910022A1E4 /* ProductResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductResponse.swift; sourceTree = "<group>"; };
 		33682D1A2E7F92050022A1E4 /* ProductItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductItemView.swift; sourceTree = "<group>"; };
-		33682D1C2E7F92B00022A1E4 /* Struct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Struct.swift; sourceTree = "<group>"; };
 		33682D1E2E7F9A040022A1E4 /* HomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepository.swift; sourceTree = "<group>"; };
 		33682D202E7F9A2C0022A1E4 /* GetHomeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetHomeUseCase.swift; sourceTree = "<group>"; };
 		33682D222E7F9AEA0022A1E4 /* HomeResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeResponse.swift; sourceTree = "<group>"; };
@@ -103,6 +99,13 @@
 		36D2EEE22E30A0470097ABE4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		36D2EEE52E30A0470097ABE4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		5073991F2EE43B49005C2C84 /* Extension */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Extension; sourceTree = "<group>"; };
+		507399282EE43BF7005C2C84 /* Struct */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Struct; sourceTree = "<group>"; };
+		507399292EE43EA0005C2C84 /* Components */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Components; sourceTree = "<group>"; };
+		507399312EE44C2A005C2C84 /* Localizations */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Localizations; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		36D2EED82E30A0460097ABE4 /* Frameworks */ = {
@@ -141,8 +144,10 @@
 		335ED25E2E7BE99300ADF008 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
-				335ED25F2E7BE9A200ADF008 /* Extension.swift */,
-				33682D1C2E7F92B00022A1E4 /* Struct.swift */,
+				507399312EE44C2A005C2C84 /* Localizations */,
+				507399292EE43EA0005C2C84 /* Components */,
+				507399282EE43BF7005C2C84 /* Struct */,
+				5073991F2EE43B49005C2C84 /* Extension */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -326,6 +331,7 @@
 		36D2EEDD2E30A0460097ABE4 /* MazzApp */ = {
 			isa = PBXGroup;
 			children = (
+				36D2EEE22E30A0470097ABE4 /* Assets.xcassets */,
 				334C7ADA2E83B60000E3C4F5 /* Info.plist */,
 				36D2EEDE2E30A0460097ABE4 /* MazzApp.swift */,
 				337E9CC22E7D0042000C430B /* Tab Bar */,
@@ -339,7 +345,6 @@
 				337E9CC12E7D0028000C430B /* Pokemon Page */,
 				337E9CB92E7CFEEE000C430B /* Profile Page */,
 				335ED25E2E7BE99300ADF008 /* Helper */,
-				36D2EEE22E30A0470097ABE4 /* Assets.xcassets */,
 				36D2EEE42E30A0470097ABE4 /* Preview Content */,
 				334C7ADB2E83C1A400E3C4F5 /* Config.plist */,
 			);
@@ -368,6 +373,12 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				5073991F2EE43B49005C2C84 /* Extension */,
+				507399282EE43BF7005C2C84 /* Struct */,
+				507399292EE43EA0005C2C84 /* Components */,
+				507399312EE44C2A005C2C84 /* Localizations */,
 			);
 			name = MazzApp;
 			packageProductDependencies = (
@@ -402,6 +413,7 @@
 			knownRegions = (
 				en,
 				Base,
+				id,
 			);
 			mainGroup = 36D2EED22E30A0460097ABE4;
 			packageReferences = (
@@ -445,7 +457,6 @@
 				337E9CB52E7CF239000C430B /* HomeViewModel.swift in Sources */,
 				335ED25D2E7BAE8600ADF008 /* SignInView.swift in Sources */,
 				335ED2732E7C5E0300ADF008 /* APIService.swift in Sources */,
-				33682D1D2E7F92B00022A1E4 /* Struct.swift in Sources */,
 				36D2EEE12E30A0460097ABE4 /* TabBarView.swift in Sources */,
 				33682D232E7F9AEA0022A1E4 /* HomeResponse.swift in Sources */,
 				33682D1B2E7F92050022A1E4 /* ProductItemView.swift in Sources */,
@@ -470,7 +481,6 @@
 				335ED2672E7C105A00ADF008 /* BannerCarouselView.swift in Sources */,
 				335ED2692E7C248000ADF008 /* UserCardItem.swift in Sources */,
 				334C7AC82E838D1800E3C4F5 /* PokemonDetailView.swift in Sources */,
-				335ED2602E7BE9A200ADF008 /* Extension.swift in Sources */,
 				337E9CBC2E7CFF35000C430B /* ProfileOptionRow.swift in Sources */,
 				36AC39352E364295000DFFF8 /* TrendingView.swift in Sources */,
 				334C7ACA2E83916000E3C4F5 /* PokemonViewModel.swift in Sources */,
@@ -542,6 +552,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -598,6 +609,7 @@
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -610,6 +622,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MazzApp/Preview Content\"";
+				DEVELOPMENT_TEAM = A43UR5QWT9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MazzApp/Info.plist;
@@ -639,6 +652,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"MazzApp/Preview Content\"";
+				DEVELOPMENT_TEAM = A43UR5QWT9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MazzApp/Info.plist;

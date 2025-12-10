@@ -10,19 +10,23 @@ import SwiftUI
 struct HomeView: View {
     @StateObject private var viewModel = HomeViewModel(
         homeUseCase: HomeUseCase(repository: HomeRepository()))
+    
     @State private var selectedTab: String = "For You"
+    @State private var showErrorSheet = false
+    @State private var sheetTitle = ""
+    @State private var sheetMessage = ""
     
     var body: some View {
         NavigationStack {
             ScrollView(.vertical, showsIndicators: false) {
                 VStack(alignment: .leading, spacing: 16) {
                     
-                    // MARK: - Search + Icons
+                    // Search Bar
                     HStack {
                         HStack {
                             Image(systemName: "magnifyingglass")
                                 .foregroundColor(.gray)
-                            TextField("Search", text: .constant(""))
+                            TextField(languange.search, text: .constant(""))
                             Spacer()
                             Image(systemName: "camera.fill")
                                 .foregroundColor(.gray)
@@ -31,33 +35,29 @@ struct HomeView: View {
                         .background(Color(.systemGray6))
                         .cornerRadius(12)
                         
-                        Image(systemName: "cart")
-                            .font(.title2)
-                            .padding(.leading, 8)
-                        
-                        Image(systemName: "message")
-                            .font(.title2)
-                            .padding(.leading, 8)
+                        Image(systemName: "cart").font(.title2)
+                        Image(systemName: "message").font(.title2)
                     }
                     .padding(.horizontal)
                     
-                    // MARK: - Banner
+                    // Banner
                     if let banners = viewModel.homeData?.banners {
                         BannerCarouselView(banners: banners)
                     }
                     
-                    // MARK: - Detail User Card Item Buttons
+                    // User Cards
                     if let cardsItem = viewModel.homeData?.detailUserCards {
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack(spacing: 12) {
                                 ForEach(cardsItem) { card in
-                                    UserCardItem(title: card.text , icon: card.iconName)}
+                                    UserCardItem(title: card.text , icon: card.iconName)
+                                }
                             }
                             .padding(.horizontal)
                         }
                     }
                     
-                    // MARK: - Horizontal Menu (round icons)
+                    // Selling Services
                     if let serviceItem = viewModel.homeData?.sellingServices {
                         ScrollView(.horizontal, showsIndicators: false) {
                             LazyHStack(spacing: 24) {
@@ -69,7 +69,7 @@ struct HomeView: View {
                         }
                     }
                     
-                    // MARK: - Sticky Header Tabs
+                    // Tabs
                     if let stickyHeaderItem = viewModel.homeData?.tabsHomeMenu {
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack(spacing: 30) {
@@ -82,7 +82,6 @@ struct HomeView: View {
                                                 selectedTab = tab.tabName
                                             }
                                         
-                                        // Underline
                                         Rectangle()
                                             .fill(Color.blue)
                                             .frame(height: 2)
@@ -97,11 +96,11 @@ struct HomeView: View {
                         .background(Color.white)
                     }
                     
-                    // MARK: - Produk sesuai Tab
+                    // Products
                     if let items = viewModel.products[selectedTab], !items.isEmpty {
                         ProductItemView(items: items)
                     } else if viewModel.isLoading {
-                        ProgressView("Loading products...")
+                        ProgressView(languange.loadingProducts)
                             .frame(maxWidth: .infinity)
                             .padding(.top, 20)
                     }
@@ -109,11 +108,48 @@ struct HomeView: View {
                 .padding(.vertical)
                 .padding(.top, -10)
             }
+            
             .onAppear {
                 viewModel.fetchHomeData()
                 viewModel.fetchProducts()
             }
+            
+            .onReceive(viewModel.$errorMessage) { error in
+                if let error = error {
+                    sheetTitle = languange.error
+                    sheetMessage = error
+                    showErrorSheet = true
+                }
+            }
         }
+        
+        .overlay(
+            Group {
+                if showErrorSheet {
+                    VStack {
+                        Spacer()
+                        NewBottomSheetView(
+                            title: sheetTitle,
+                            message: sheetMessage,
+                            yesTitle: languange.tryAgain,
+                            imgDrawer: UIImage(named: "errorNetworkState") ?? UIImage(),
+                            onConfirmed: { _ in
+                                showErrorSheet = false
+                                viewModel.fetchHomeData()
+                                viewModel.fetchProducts()
+                            },
+                            isPresented: $showErrorSheet
+                        )
+                    }
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .ignoresSafeArea() 
+                    .background(Color.black.opacity(0.45).ignoresSafeArea())
+                    .transition(.move(edge: .bottom))
+                    .animation(.easeOut(duration: 0.25), value: showErrorSheet)
+                }
+            }
+        )
+
     }
 }
 

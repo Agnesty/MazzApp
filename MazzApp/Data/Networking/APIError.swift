@@ -16,13 +16,13 @@ enum APIError: Error, LocalizedError {
     var errorDescription: String? {
         switch self {
         case .invalidURL:
-            return "URL tidak valid"
+            return languange.invalidURL
         case .decoding:
-            return "Gagal parsing data"
+            return languange.decoding
         case .network(let err):
-            return "Jaringan bermasalah: \(err.localizedDescription)"
+            return languange.network(err.localizedDescription)
         case .unknown:
-            return "Kesalahan tidak diketahui"
+            return languange.unknown
         }
     }
 }
